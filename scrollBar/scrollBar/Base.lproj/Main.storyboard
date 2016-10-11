@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是一条永远滚动的滚动条" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEi-mO-sLY">
+                                <color key="backgroundColor" red="0.29349248600567235" green="0.69235421941889741" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjD-1E-tRC">
+                                <color key="backgroundColor" red="0.29349248600567235" green="0.69235421941889741" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VjA-n6-qc4"/>
+                                    <constraint firstAttribute="width" constant="51" id="pVk-eh-cLD"/>
+                                </constraints>
+                                <state key="normal" title="滚动吧">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="movingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zht-2o-DbJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MEi-mO-sLY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UXN-B3-e8w"/>
+                            <constraint firstItem="sjD-1E-tRC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aDT-wP-uxO"/>
+                            <constraint firstItem="MEi-mO-sLY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="149" id="tRO-rA-ACL"/>
+                            <constraint firstItem="sjD-1E-tRC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zV3-Dq-kLs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollBarCenterX" destination="UXN-B3-e8w" id="DU6-DG-Rmy"/>
+                        <outlet property="scrollBarLabel" destination="MEi-mO-sLY" id="7nz-J2-7JY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80.799999999999997" y="156.97151424287858"/>
+        </scene>
+    </scenes>
+</document>
